@@ -3,6 +3,8 @@
 ## Unreleased
 
 - Relicensed from proprietary to MIT; repository made public.
+- Added `.claude-plugin/marketplace.json` so the repo installs as its own marketplace; README install steps corrected to match.
+- README: added a sample of the output, a command table, what the plugin will not do, and the current eval baseline and known gaps.
 
 ## 0.1.0 (2026-10-25)
 
