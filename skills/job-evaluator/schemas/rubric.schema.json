@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "job-evaluator/rubric.schema.json",
+  "title": "Rubric",
+  "type": "object",
+  "required": ["rubric_version", "role_title", "jd_hash", "weighting_note", "gates", "signals"],
+  "additionalProperties": false,
+  "properties": {
+    "rubric_version": {"type": "string"},
+    "role_title": {"type": "string", "minLength": 1},
+    "jd_source": {"type": "string"},
+    "jd_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "weighting_note": {"type": "string", "minLength": 1},
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "requirement", "jd_phrase", "verifiable_from_resume"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^g[0-9]+$"},
+          "requirement": {"type": "string"},
+          "jd_phrase": {"type": "string"},
+          "verifiable_from_resume": {"type": "boolean"}
+        }
+      }
+    },
+    "signals": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["id", "criterion", "weight", "evidence_full", "evidence_partial", "jd_phrase", "weak_signal"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^s[0-9]+$"},
+          "criterion": {"type": "string"},
+          "weight": {"type": "number", "exclusiveMinimum": 0, "maximum": 100},
+          "evidence_full": {"type": "string"},
+          "evidence_partial": {"type": "string"},
+          "jd_phrase": {"type": "string"},
+          "weak_signal": {"type": "boolean"}
+        }
+      }
+    },
+    "dropped": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["jd_phrase", "reason"],
+        "properties": {"jd_phrase": {"type": "string"}, "reason": {"type": "string"}}
+      }
+    },
+    "open_questions": {"type": "array", "items": {"type": "string"}}
+  }
+}

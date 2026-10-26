@@ -1,0 +1,16 @@
+Arjun Malhotra
+arjun.m@example.com | +91 99800 22334
+Will require visa sponsorship to work in the UK. Can relocate to London and work on-site.
+
+Experience
+Senior Engineer, Core Ledger, Saffron Bank, Mumbai (Aug 2019 - Present)
+- Built the double-entry ledger service in Python for 1.5 million daily transactions
+- Implemented idempotency keys for the UPI posting API
+- Led incident response as on-call lead and wrote postmortems for ledger incidents
+- Designed PostgreSQL schemas and migrations for the ledger at 1 TB scale
+
+Software Engineer, Opalgrid, Pune (Jul 2016 - Jul 2019)
+- Built Python services for payment reconciliation
+
+Education
+B.Tech, Computer Science, 2016

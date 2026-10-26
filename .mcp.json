@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "job-sources": {
+      "command": "python3",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/mcp/job-sources/server.py"],
+      "env": {
+        "GREENHOUSE_API_KEY": "${GREENHOUSE_API_KEY:-}",
+        "JOB_EVALUATOR_LOG_DIR": "${JOB_EVALUATOR_LOG_DIR:-}"
+      }
+    }
+  }
+}

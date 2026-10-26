@@ -1,0 +1,26 @@
+Priya Raman
+(she/her)
+priya.raman@example.com | +91 98450 12345 | linkedin.com/in/priya-raman-example
+Based in Bengaluru; available to work from office 3 days a week
+
+Summary
+Product manager with eight years in consumer fintech, focused on card issuing and partner-bank programmes.
+
+Experience
+Lead Product Manager, Cards, Kestrel Finance, Bengaluru (Mar 2021 - Present)
+- Led launch of co-branded credit card to 180k customers in 9 months with a partner bank
+- Owned RBI submission and remediation for card programme approval
+- Ran weekly launch council across risk, compliance, engineering and partner bank
+- Owned the 4-quarter roadmap for the issuing platform and its prioritisation
+- Used SQL cohort analysis to cut activation drop-off by 18%
+
+Product Manager, Payments, Lumora Tech, Bengaluru (Jun 2017 - Feb 2021)
+- Shipped UPI autopay mandates to 2 million users
+- Worked with compliance on NPCI certification for the mandates flow
+
+Education
+MBA, Finance, Indian Institute of Management, 2017
+B.Tech, Electronics, 2012
+
+Skills
+Product strategy, card issuing, SQL, Looker, stakeholder management

@@ -1,0 +1,14 @@
+Rohan Das
+rohan.das@example.com | +91 93300 66778
+
+Experience
+Junior Analyst, Lattice Health, Kolkata (Jul 2023 - Present)
+- Wrote SQL reports for the operations team
+- Built general business dashboards in Power BI
+- Mentions stakeholder reporting to the operations head
+
+Education
+B.Sc, Mathematics, 2023
+
+Skills
+SQL, Power BI, Excel

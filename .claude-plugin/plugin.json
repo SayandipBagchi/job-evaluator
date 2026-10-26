@@ -1,0 +1,21 @@
+{
+  "name": "job-evaluator",
+  "version": "0.1.0",
+  "description": "Recruiter-side resume evaluator. Turns a job description into a frozen weighted rubric, scores each resume against it with quoted evidence, and recommends Shortlist, Review or Not recommended with a match score and confidence. A human confirms every recommendation.",
+  "author": {
+    "name": "Sayandip Bagchi"
+  },
+  "license": "Proprietary",
+  "keywords": [
+    "recruiting",
+    "hiring",
+    "resume",
+    "job-description",
+    "screening",
+    "shortlist",
+    "ats",
+    "greenhouse",
+    "fairness",
+    "evals"
+  ]
+}

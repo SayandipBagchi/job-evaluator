@@ -1,0 +1,16 @@
+Imran Sheikh
+imran.sheikh@example.com | +91 98200 33445
+
+Experience
+Data Analyst, Bluefin Media, Mumbai (Aug 2021 - Present)
+- Wrote SQL against the BigQuery warehouse to show that push notifications after 9pm doubled unsubscribes, which changed the send schedule
+- Reported experiment results designed by the product team
+- Built acquisition dashboards for the growth team in Looker
+- Mentions weekly reporting to the marketing team
+- Uses Python for data cleaning only
+
+Education
+B.Sc, Economics, 2021
+
+Skills
+SQL, Looker, Python, Excel

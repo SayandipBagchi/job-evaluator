@@ -1,0 +1,21 @@
+Wei Chen
+wei.chen@example.com | +65 9123 4567
+Seeking fully remote roles only; not able to relocate or commute to an office
+
+Summary
+Card product lead with regulated launches in Singapore and India.
+
+Experience
+Head of Card Products, Harbour Bank Digital, Singapore (Feb 2020 - Present)
+- Led launch of a virtual debit card to 300k customers across two markets
+- Took the card programme through MAS and RBI approvals as product owner
+- Chaired the launch steering group with risk, compliance, engineering and the card network
+- Owned the card platform roadmap for six quarters
+- Used SQL to size fraud-rule changes that cut chargebacks by 22%
+
+Product Manager, Payments, Quayside Pay, Singapore (Mar 2016 - Jan 2020)
+- Shipped merchant QR acceptance to 12k merchants
+
+Education
+MBA, 2015
+B.Sc, Mathematics, 2010

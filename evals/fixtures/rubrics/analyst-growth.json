@@ -1,0 +1,62 @@
+{
+  "rubric_version": "1",
+  "role_title": "Data Analyst, Growth",
+  "jd_source": "evals/fixtures/jds/analyst-growth.md",
+  "jd_hash": "0039f0e237fcdf2ce9bee8d6e7001a64300ae3c48a9972eadca31f3f770d524e",
+  "weighting_note": "Experiment design and stakeholder communication carry as much weight as SQL; dashboards alone are not enough.",
+  "gates": [],
+  "signals": [
+    {
+      "id": "s1",
+      "criterion": "SQL analysis on a production warehouse",
+      "weight": 25,
+      "evidence_full": "Wrote SQL against a warehouse to answer business questions with stated outcomes",
+      "evidence_partial": "Lists SQL or reporting without stated outcomes",
+      "jd_phrase": "Write SQL against our warehouse",
+      "weak_signal": false
+    },
+    {
+      "id": "s2",
+      "criterion": "Designed and analysed A/B tests",
+      "weight": 25,
+      "evidence_full": "Designed experiments, set sample sizes and read results that changed a decision",
+      "evidence_partial": "Reported experiment results designed by others",
+      "jd_phrase": "Design and read A/B tests on onboarding and pricing",
+      "weak_signal": false
+    },
+    {
+      "id": "s3",
+      "criterion": "Growth funnel and retention analysis",
+      "weight": 20,
+      "evidence_full": "Built acquisition, activation or retention analyses or dashboards used by a growth team",
+      "evidence_partial": "General business dashboards",
+      "jd_phrase": "Build and maintain growth dashboards for acquisition, activation and retention",
+      "weak_signal": false
+    },
+    {
+      "id": "s4",
+      "criterion": "Clear written communication with business teams",
+      "weight": 15,
+      "evidence_full": "Wrote findings or presented analysis that non-technical teams acted on",
+      "evidence_partial": "Mentions stakeholder reporting without an outcome",
+      "jd_phrase": "Clear written communication with business stakeholders",
+      "weak_signal": false
+    },
+    {
+      "id": "s5",
+      "criterion": "Python or R for analysis and forecasting",
+      "weight": 15,
+      "evidence_full": "Built cohort, forecasting or statistical models in Python or R",
+      "evidence_partial": "Uses Python or R for data cleaning only",
+      "jd_phrase": "Build simple forecasting and cohort models",
+      "weak_signal": false
+    }
+  ],
+  "dropped": [
+    {
+      "jd_phrase": "Native English speaker",
+      "reason": "National-origin proxy. Translated to the capability it stands for, which s4 already measures: clear written English."
+    }
+  ],
+  "open_questions": []
+}

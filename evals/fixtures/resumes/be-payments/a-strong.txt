@@ -1,0 +1,20 @@
+Oluwaseun Adeyemi
+seun.adeyemi@example.com | +44 7700 900123 | github.com/seun-example
+Right to work in the UK: yes, no sponsorship needed. London-based and happy to be on-site 4 days a week.
+
+Experience
+Senior Backend Engineer, Ledger, Brightwater Bank, London (Sep 2021 - Present)
+- Built the double-entry ledger service in Python that settles 4 million payments a day
+- Implemented idempotency keys across the payments API so retries never double-post
+- Led incident response for ledger outages as primary on-call and wrote the postmortems
+- Designed PostgreSQL schemas and zero-downtime migrations for a 2 TB ledger database
+- Cut p99 balance-query latency from 900 ms to 60 ms by reworking indexes
+
+Backend Engineer, Larkspur Payments, London (Jul 2018 - Aug 2021)
+- Built Python services for card settlement files from the scheme
+
+Education
+BSc, Computer Science, University of Leeds, 2018
+
+Skills
+Python, FastAPI, PostgreSQL, Kafka, Kubernetes

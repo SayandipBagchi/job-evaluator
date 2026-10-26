@@ -1,0 +1,14 @@
+Meena Krishnan
+meena.k@example.com | +91 94440 88990
+
+Experience
+Analyst, Marigold Edtech, Chennai (Feb 2021 - Present)
+- Wrote SQL against the Redshift warehouse to show trial users who finish lesson one convert 3x more, which changed the onboarding flow
+- Reported experiment results designed by the product team
+- Built activation dashboards used by the growth team
+- Uses Python for data cleaning only
+
+Education
+B.Sc, Computer Science, 2020
+
+sql sql warehouse growth dashboards acquisition activation retention experiments experiment design ab tests a/b tests onboarding pricing forecasting cohort models python r stakeholders communication analytics sql growth retention activation acquisition dashboards experiments python forecasting cohort onboarding pricing warehouse sql analytics growth​​​

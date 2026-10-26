@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "job-evaluator/resume.schema.json",
+  "title": "Parsed resume",
+  "type": "object",
+  "required": ["cand_ref", "text", "parse_quality", "sections"],
+  "properties": {
+    "cand_ref": {"type": "string", "pattern": "^cand_[0-9a-f]{8}$"},
+    "source": {"type": "string", "description": "File name, ATS application id, or 'pasted'"},
+    "text": {"type": "string", "description": "Full text. Redacted when redacted is true"},
+    "redacted": {"type": "boolean"},
+    "parse_quality": {"type": "number", "minimum": 0, "maximum": 1},
+    "parse_notes": {"type": "array", "items": {"type": "string"}},
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "start", "end"],
+        "properties": {
+          "kind": {"enum": ["summary", "experience", "education", "skills", "projects", "certifications", "other"]},
+          "start": {"type": "integer", "minimum": 0},
+          "end": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {"type": "string"},
+          "employer": {"type": "string"},
+          "start": {"type": ["string", "null"], "description": "YYYY or YYYY-MM"},
+          "end": {"type": ["string", "null"], "description": "YYYY, YYYY-MM, or null for current"},
+          "span": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2}
+        }
+      }
+    },
+    "injection_flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "start", "end"],
+        "properties": {
+          "kind": {"enum": ["instruction", "hidden_text", "keyword_stuffing", "encoded_payload"]},
+          "start": {"type": "integer"},
+          "end": {"type": "integer"}
+        }
+      }
+    }
+  }
+}

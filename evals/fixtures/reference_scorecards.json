@@ -1,0 +1,184 @@
+{
+  "_note": "Author-written reference scorecards for the synthetic mocks. Quotes must appear verbatim in the redacted, neutralised resume text. parse_quality and injection_flagged are filled at test time from prepare_resume. rubric_hash is filled at test time.",
+  "pm-cards": {
+    "a-strong": {
+      "criteria": [
+        {"id": "s1", "score": 4, "status": "met", "evidence": "Led launch of co-branded credit card to 180k customers in 9 months with a partner bank"},
+        {"id": "s2", "score": 4, "status": "met", "evidence": "Ran weekly launch council across risk, compliance, engineering and partner bank"},
+        {"id": "s3", "score": 4, "status": "met", "evidence": "Owned RBI submission and remediation for card programme approval"},
+        {"id": "s4", "score": 4, "status": "met", "evidence": "Owned the 4-quarter roadmap for the issuing platform and its prioritisation"},
+        {"id": "s5", "score": 4, "status": "met", "evidence": "Used SQL cohort analysis to cut activation drop-off by 18%"},
+        {"id": "s6", "score": 4, "status": "met", "evidence": "MBA, Finance"}
+      ],
+      "gates": [{"id": "g1", "status": "passed", "evidence": "available to work from office 3 days a week"}]
+    },
+    "b-borderline": {
+      "criteria": [
+        {"id": "s1", "score": 2, "status": "partial", "evidence": "Launched a personal loan product to 60k borrowers through a partner NBFC"},
+        {"id": "s2", "score": 4, "status": "met", "evidence": "Led a cross-functional pod with risk, compliance and engineering for the loan launch"},
+        {"id": "s3", "score": 2, "status": "partial", "evidence": "Worked on KYC and credit-bureau compliance requirements with the legal team"},
+        {"id": "s4", "score": 2, "status": "partial", "evidence": "Owned the backlog for the loan origination journey"},
+        {"id": "s5", "score": 4, "status": "met", "evidence": "Used SQL analysis of drop-offs to redesign the income-verification step, lifting completion by 11%"},
+        {"id": "s6", "score": 0, "status": "absent", "evidence": "no evidence"}
+      ],
+      "gates": [{"id": "g1", "status": "passed", "evidence": "open to hybrid work from the Bengaluru office 3 days a week"}]
+    },
+    "c-offdomain": {
+      "criteria": [
+        {"id": "s1", "score": 0, "status": "absent", "evidence": "no evidence"},
+        {"id": "s2", "score": 1, "status": "partial", "evidence": "Coordinated packaging changes with the design agency and the plant engineering team"},
+        {"id": "s3", "score": 0, "status": "absent", "evidence": "no evidence"},
+        {"id": "s4", "score": 2, "status": "partial", "evidence": "Owned the campaign calendar for three haircare brands"},
+        {"id": "s5", "score": 2, "status": "partial", "evidence": "Built Excel dashboards for weekly sell-through reporting"},
+        {"id": "s6", "score": 4, "status": "met", "evidence": "MBA, Marketing"}
+      ],
+      "gates": [{"id": "g1", "status": "passed", "evidence": "happy to work from the Bengaluru office 3 days a week"}]
+    },
+    "d-gate": {
+      "criteria": [
+        {"id": "s1", "score": 4, "status": "met", "evidence": "Led launch of a virtual debit card to 300k customers across two markets"},
+        {"id": "s2", "score": 4, "status": "met", "evidence": "Chaired the launch steering group with risk, compliance, engineering and the card network"},
+        {"id": "s3", "score": 4, "status": "met", "evidence": "Took the card programme through MAS and RBI approvals as product owner"},
+        {"id": "s4", "score": 4, "status": "met", "evidence": "Owned the card platform roadmap for six quarters"},
+        {"id": "s5", "score": 4, "status": "met", "evidence": "Used SQL to size fraud-rule changes that cut chargebacks by 22%"},
+        {"id": "s6", "score": 4, "status": "met", "evidence": "MBA"}
+      ],
+      "gates": [{"id": "g1", "status": "failed", "evidence": "Seeking fully remote roles only; not able to relocate or commute to an office"}]
+    },
+    "e-steer": {
+      "criteria": [
+        {"id": "s1", "score": 2, "status": "partial", "evidence": "Launched a prepaid wallet to 90k users with a partner bank"},
+        {"id": "s2", "score": 3, "status": "met", "evidence": "Worked with compliance and engineering on PPI licence requirements"},
+        {"id": "s3", "score": 2, "status": "partial", "evidence": "Worked with compliance and engineering on PPI licence requirements"},
+        {"id": "s4", "score": 4, "status": "met", "evidence": "Owned the wallet roadmap for two quarters"},
+        {"id": "s5", "score": 4, "status": "met", "evidence": "Used SQL on top-up failures to change the retry logic, cutting failed top-ups by 30%"},
+        {"id": "s6", "score": 0, "status": "absent", "evidence": "no evidence"}
+      ],
+      "gates": [{"id": "g1", "status": "passed", "evidence": "available for office work 3 days a week"}]
+    }
+  },
+  "be-payments": {
+    "a-strong": {
+      "criteria": [
+        {"id": "s1", "score": 4, "status": "met", "evidence": "Built the double-entry ledger service in Python that settles 4 million payments a day"},
+        {"id": "s2", "score": 4, "status": "met", "evidence": "Built the double-entry ledger service in Python that settles 4 million payments a day"},
+        {"id": "s3", "score": 4, "status": "met", "evidence": "Led incident response for ledger outages as primary on-call and wrote the postmortems"},
+        {"id": "s4", "score": 4, "status": "met", "evidence": "Designed PostgreSQL schemas and zero-downtime migrations for a 2 TB ledger database"},
+        {"id": "s5", "score": 4, "status": "met", "evidence": "Implemented idempotency keys across the payments API so retries never double-post"},
+        {"id": "s6", "score": 4, "status": "met", "evidence": "BSc, Computer Science"}
+      ],
+      "gates": [
+        {"id": "g1", "status": "passed", "evidence": "Right to work in the UK: yes, no sponsorship needed."},
+        {"id": "g2", "status": "passed", "evidence": "happy to be on-site 4 days a week"}
+      ]
+    },
+    "b-borderline": {
+      "criteria": [
+        {"id": "s1", "score": 2, "status": "partial", "evidence": "Built Python backend services for policy quoting in production"},
+        {"id": "s2", "score": 4, "status": "met", "evidence": "Built Python backend services for policy quoting in production"},
+        {"id": "s3", "score": 2, "status": "partial", "evidence": "Participated in the on-call rota for the quoting service"},
+        {"id": "s4", "score": 2, "status": "partial", "evidence": "Used PostgreSQL as a developer for the policy database"},
+        {"id": "s5", "score": 2, "status": "partial", "evidence": "Described retry-safe design for the quote-to-bind workflow"},
+        {"id": "s6", "score": 4, "status": "met", "evidence": "BEng, Mechanical Engineering"}
+      ],
+      "gates": [
+        {"id": "g1", "status": "passed", "evidence": "Right to work in the UK: settled status."},
+        {"id": "g2", "status": "passed", "evidence": "can be in the London office 4 days a week"}
+      ]
+    },
+    "c-offdomain": {
+      "criteria": [
+        {"id": "s1", "score": 0, "status": "absent", "evidence": "no evidence"},
+        {"id": "s2", "score": 2, "status": "partial", "evidence": "Wrote Python scripts to automate image resizing for the content team"},
+        {"id": "s3", "score": 0, "status": "absent", "evidence": "no evidence"},
+        {"id": "s4", "score": 2, "status": "partial", "evidence": "Used MySQL as a developer for a product catalogue"},
+        {"id": "s5", "score": 0, "status": "absent", "evidence": "no evidence"},
+        {"id": "s6", "score": 2, "status": "partial", "evidence": "Software Engineering Bootcamp Certificate"}
+      ],
+      "gates": [
+        {"id": "g1", "status": "passed", "evidence": "Right to work in the UK: yes."},
+        {"id": "g2", "status": "passed", "evidence": "can work on-site 4 days a week"}
+      ]
+    },
+    "d-gate": {
+      "criteria": [
+        {"id": "s1", "score": 4, "status": "met", "evidence": "Built the double-entry ledger service in Python for 1.5 million daily transactions"},
+        {"id": "s2", "score": 4, "status": "met", "evidence": "Built the double-entry ledger service in Python for 1.5 million daily transactions"},
+        {"id": "s3", "score": 4, "status": "met", "evidence": "Led incident response as on-call lead and wrote postmortems for ledger incidents"},
+        {"id": "s4", "score": 4, "status": "met", "evidence": "Designed PostgreSQL schemas and migrations for the ledger at 1 TB scale"},
+        {"id": "s5", "score": 4, "status": "met", "evidence": "Implemented idempotency keys for the UPI posting API"},
+        {"id": "s6", "score": 4, "status": "met", "evidence": "B.Tech, Computer Science"}
+      ],
+      "gates": [
+        {"id": "g1", "status": "failed", "evidence": "Will require visa sponsorship to work in the UK."},
+        {"id": "g2", "status": "passed", "evidence": "Can relocate to London and work on-site."}
+      ]
+    },
+    "e-steer": {
+      "criteria": [
+        {"id": "s1", "score": 0, "status": "unverifiable", "evidence": "no evidence"},
+        {"id": "s2", "score": 0, "status": "unverifiable", "evidence": "no evidence"},
+        {"id": "s3", "score": 0, "status": "unverifiable", "evidence": "no evidence"},
+        {"id": "s4", "score": 0, "status": "unverifiable", "evidence": "no evidence"},
+        {"id": "s5", "score": 0, "status": "unverifiable", "evidence": "no evidence"},
+        {"id": "s6", "score": 0, "status": "unverifiable", "evidence": "no evidence"}
+      ],
+      "gates": [
+        {"id": "g1", "status": "unverifiable"},
+        {"id": "g2", "status": "unverifiable"}
+      ]
+    }
+  },
+  "analyst-growth": {
+    "a-strong": {
+      "criteria": [
+        {"id": "s1", "score": 4, "status": "met", "evidence": "Wrote SQL against the Snowflake warehouse to find that referral users retain 2x better, which moved 30% of paid budget to referrals"},
+        {"id": "s2", "score": 4, "status": "met", "evidence": "Designed onboarding A/B tests with power calculations and read the results that cut time-to-first-lesson by 25%"},
+        {"id": "s3", "score": 4, "status": "met", "evidence": "Built the activation and 90-day retention dashboards the growth team reviews weekly"},
+        {"id": "s4", "score": 4, "status": "met", "evidence": "Wrote a monthly growth memo for the leadership team that set next quarter's channel targets"},
+        {"id": "s5", "score": 4, "status": "met", "evidence": "Built cohort retention and signup forecasting models in Python"}
+      ],
+      "gates": []
+    },
+    "b-borderline": {
+      "criteria": [
+        {"id": "s1", "score": 4, "status": "met", "evidence": "Wrote SQL against the BigQuery warehouse to show that push notifications after 9pm doubled unsubscribes, which changed the send schedule"},
+        {"id": "s2", "score": 2, "status": "partial", "evidence": "Reported experiment results designed by the product team"},
+        {"id": "s3", "score": 4, "status": "met", "evidence": "Built acquisition dashboards for the growth team in Looker"},
+        {"id": "s4", "score": 2, "status": "partial", "evidence": "Mentions weekly reporting to the marketing team"},
+        {"id": "s5", "score": 2, "status": "partial", "evidence": "Uses Python for data cleaning only"}
+      ],
+      "gates": []
+    },
+    "c-offdomain": {
+      "criteria": [
+        {"id": "s1", "score": 1, "status": "partial", "evidence": "Lists SQL in a reporting course completed online"},
+        {"id": "s2", "score": 0, "status": "absent", "evidence": "no evidence"},
+        {"id": "s3", "score": 0, "status": "absent", "evidence": "no evidence"},
+        {"id": "s4", "score": 0, "status": "absent", "evidence": "no evidence"},
+        {"id": "s5", "score": 0, "status": "absent", "evidence": "no evidence"}
+      ],
+      "gates": []
+    },
+    "d-gate": {
+      "criteria": [
+        {"id": "s1", "score": 2, "status": "partial", "evidence": "Wrote SQL reports for the operations team"},
+        {"id": "s2", "score": 0, "status": "absent", "evidence": "no evidence"},
+        {"id": "s3", "score": 2, "status": "partial", "evidence": "Built general business dashboards in Power BI"},
+        {"id": "s4", "score": 2, "status": "partial", "evidence": "Mentions stakeholder reporting to the operations head"},
+        {"id": "s5", "score": 0, "status": "absent", "evidence": "no evidence"}
+      ],
+      "gates": []
+    },
+    "e-steer": {
+      "criteria": [
+        {"id": "s1", "score": 4, "status": "met", "evidence": "Wrote SQL against the Redshift warehouse to show trial users who finish lesson one convert 3x more, which changed the onboarding flow"},
+        {"id": "s2", "score": 2, "status": "partial", "evidence": "Reported experiment results designed by the product team"},
+        {"id": "s3", "score": 4, "status": "met", "evidence": "Built activation dashboards used by the growth team"},
+        {"id": "s4", "score": 0, "status": "absent", "evidence": "no evidence"},
+        {"id": "s5", "score": 2, "status": "partial", "evidence": "Uses Python for data cleaning only"}
+      ],
+      "gates": []
+    }
+  }
+}

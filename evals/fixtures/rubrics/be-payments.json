@@ -1,0 +1,84 @@
+{
+  "rubric_version": "1",
+  "role_title": "Backend Engineer, Payments Ledger",
+  "jd_source": "evals/fixtures/jds/be-payments.md",
+  "jd_hash": "400d6ea4937bcdb7f006a95b9cee124a6e8c6d08731dcfc52ed76f650d5176db",
+  "weighting_note": "Ledger correctness and production ownership carry the role; general Python skill is necessary but not sufficient.",
+  "gates": [
+    {
+      "id": "g1",
+      "requirement": "Right to work in the UK",
+      "jd_phrase": "You must have the right to work in the UK",
+      "verifiable_from_resume": false
+    },
+    {
+      "id": "g2",
+      "requirement": "Can work on-site in London 4 days a week",
+      "jd_phrase": "London (on-site, 4 days a week)",
+      "verifiable_from_resume": false
+    }
+  ],
+  "signals": [
+    {
+      "id": "s1",
+      "criterion": "Built payments, ledger or financial systems",
+      "weight": 30,
+      "evidence_full": "Built or owned a ledger, settlement or payments service in production",
+      "evidence_partial": "Worked on a fintech product without money-movement core",
+      "jd_phrase": "Experience with payments, ledgers or financial systems",
+      "weak_signal": false
+    },
+    {
+      "id": "s2",
+      "criterion": "Production backend services in Python",
+      "weight": 25,
+      "evidence_full": "Built and shipped Python backend services running in production",
+      "evidence_partial": "Python scripting or backend services in another language",
+      "jd_phrase": "Design and build services in Python",
+      "weak_signal": false
+    },
+    {
+      "id": "s3",
+      "criterion": "Owned reliability and incident response",
+      "weight": 20,
+      "evidence_full": "Was on call for a production service and led incidents or postmortems",
+      "evidence_partial": "Participated in on-call without leading incidents",
+      "jd_phrase": "Own reliability of ledger services: on-call, incident response, postmortems",
+      "weak_signal": false
+    },
+    {
+      "id": "s4",
+      "criterion": "PostgreSQL schema and performance work",
+      "weight": 15,
+      "evidence_full": "Designed PostgreSQL schemas or migrations and fixed query performance at scale",
+      "evidence_partial": "Used PostgreSQL or another relational database as a developer",
+      "jd_phrase": "Work with PostgreSQL at scale",
+      "weak_signal": false
+    },
+    {
+      "id": "s5",
+      "criterion": "Double-entry and idempotent API design",
+      "weight": 7,
+      "evidence_full": "Implemented double-entry accounting or idempotency keys in an API",
+      "evidence_partial": "Describes transactional or retry-safe design",
+      "jd_phrase": "Model money movement with double-entry accounting and idempotent APIs",
+      "weak_signal": false
+    },
+    {
+      "id": "s6",
+      "criterion": "Computer science or related degree",
+      "weight": 3,
+      "evidence_full": "Degree in computer science, engineering, mathematics or a related field",
+      "evidence_partial": "Bootcamp or certificate in software engineering",
+      "jd_phrase": "Degree in computer science or a related field",
+      "weak_signal": true
+    }
+  ],
+  "dropped": [
+    {
+      "jd_phrase": "4+ years building backend services",
+      "reason": "Years stand in for capability measured by s1 to s3."
+    }
+  ],
+  "open_questions": []
+}

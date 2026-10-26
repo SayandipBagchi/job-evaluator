@@ -1,0 +1,23 @@
+Rahul Menon
+rahul.menon@example.com | +91 99000 54321
+Bengaluru-based, open to hybrid work from the Bengaluru office 3 days a week
+
+Summary
+Product manager in digital lending, moving towards card products.
+
+Experience
+Senior Product Manager, Lending, Orchid Credit, Bengaluru (Jan 2020 - Present)
+- Launched a personal loan product to 60k borrowers through a partner NBFC
+- Led a cross-functional pod with risk, compliance and engineering for the loan launch
+- Worked on KYC and credit-bureau compliance requirements with the legal team
+- Owned the backlog for the loan origination journey
+- Used SQL analysis of drop-offs to redesign the income-verification step, lifting completion by 11%
+
+Associate Product Manager, Brightline Software, Chennai (Jul 2016 - Dec 2019)
+- Managed releases for a B2B invoicing tool
+
+Education
+B.E., Computer Science, 2016
+
+Skills
+Lending, SQL, Mixpanel, Jira

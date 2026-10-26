@@ -1,0 +1,32 @@
+{
+  "role_id": "senior-pm",
+  "title": "Senior Product Manager",
+  "jurisdictions": [
+    "IN",
+    "UK"
+  ],
+  "candidate_locations_in_scope": [
+    "IN",
+    "UK"
+  ],
+  "nyc_bias_audit_date": null,
+  "thresholds": {
+    "shortlist_min_score": 75,
+    "review_min_score": 60,
+    "shortlist_min_confidence": 0.5,
+    "low_confidence_below": 0.5,
+    "parse_quality_min": 0.6
+  },
+  "ats": {
+    "provider": "greenhouse",
+    "job_id": null
+  },
+  "retention_days": 180,
+  "hard_constraints_not_in_jd": [
+    "Notice period of 60 days or less",
+    "Willing to work from Bengaluru office 3 days a week"
+  ],
+  "notes": "Example config. Copy to tenants/<org>/roles/<role>.json and fill. Thresholds here override the skill defaults.",
+  "shortlist_on_unverifiable": false,
+  "notice_required": true
+}

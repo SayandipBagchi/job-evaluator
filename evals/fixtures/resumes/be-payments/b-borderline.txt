@@ -1,0 +1,19 @@
+Tomasz Nowak
+tomasz.nowak@example.com | +44 7700 900456
+Right to work in the UK: settled status. Based in Croydon, can be in the London office 4 days a week.
+
+Experience
+Software Engineer, Insurance Platform, Meadow Insure, London (Mar 2020 - Present)
+- Built Python backend services for policy quoting in production
+- Participated in the on-call rota for the quoting service
+- Used PostgreSQL as a developer for the policy database
+- Described retry-safe design for the quote-to-bind workflow in an internal design doc
+
+Junior Developer, Kitebox Digital, Manchester (Sep 2018 - Feb 2020)
+- Built Django features for e-commerce clients
+
+Education
+BEng, Mechanical Engineering, 2018
+
+Skills
+Python, Django, PostgreSQL, Docker

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "job-evaluator/scorecard.schema.json",
+  "title": "Scorecard",
+  "type": "object",
+  "required": ["cand_ref", "rubric_hash", "criteria", "gates", "parse_quality", "injection_flagged"],
+  "properties": {
+    "cand_ref": {"type": "string", "pattern": "^cand_[0-9a-f]{8}$"},
+    "rubric_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "score", "status", "evidence"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^s[0-9]+$"},
+          "score": {"type": "integer", "minimum": 0, "maximum": 4},
+          "status": {"enum": ["met", "partial", "absent", "unverifiable"]},
+          "evidence": {"type": "string", "description": "Verbatim quote from the redacted resume, or the literal 'no evidence'"},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "status"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^g[0-9]+$"},
+          "status": {"enum": ["passed", "failed", "unverifiable"]},
+          "evidence": {"type": "string"}
+        }
+      }
+    },
+    "parse_quality": {"type": "number", "minimum": 0, "maximum": 1},
+    "injection_flagged": {"type": "boolean"},
+    "over_levelled": {"type": "boolean"},
+    "strengths": {"type": "array", "items": {"type": "string"}, "maxItems": 3},
+    "gaps": {"type": "array", "items": {"type": "string"}, "maxItems": 3},
+    "screening_items": {"type": "array", "items": {"type": "string"}},
+    "score": {"type": "number", "minimum": 0, "maximum": 100},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "confidence_level": {"enum": ["High", "Med", "Low"]},
+    "band": {"enum": ["Shortlist", "Review", "Not recommended"]},
+    "band_rule": {"type": "integer", "minimum": 1, "maximum": 6}
+  }
+}

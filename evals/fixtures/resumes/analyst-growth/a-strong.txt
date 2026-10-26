@@ -1,0 +1,19 @@
+Kavya Reddy
+kavya.reddy@example.com | +91 90080 44556
+
+Experience
+Senior Analyst, Growth, Pathway Learning, Hyderabad (Jan 2022 - Present)
+- Wrote SQL against the Snowflake warehouse to find that referral users retain 2x better, which moved 30% of paid budget to referrals
+- Designed onboarding A/B tests with power calculations and read the results that cut time-to-first-lesson by 25%
+- Built the activation and 90-day retention dashboards the growth team reviews weekly
+- Wrote a monthly growth memo for the leadership team that set next quarter's channel targets
+- Built cohort retention and signup forecasting models in Python
+
+Analyst, Northgate Retail, Bengaluru (Jun 2020 - Dec 2021)
+- Built sales reports in Tableau
+
+Education
+M.Sc, Statistics, 2020
+
+Skills
+SQL, Python, dbt, Tableau, experimentation

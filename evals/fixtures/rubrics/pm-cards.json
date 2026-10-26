@@ -1,0 +1,88 @@
+{
+  "rubric_version": "1",
+  "role_title": "Senior Product Manager, Card Issuing",
+  "jd_source": "evals/fixtures/jds/pm-cards.md",
+  "jd_hash": "22c77468c7838d488ecb74137507108a26964f4a57e6c39386dc9029ad5a5aae",
+  "weighting_note": "Launch-and-stakeholder role: shipping regulated card programmes outweighs SQL depth, although the JD lists SQL.",
+  "gates": [
+    {
+      "id": "g1",
+      "requirement": "Can work from the Bengaluru office 3 days a week",
+      "jd_phrase": "Must be able to work from our Bengaluru office 3 days a week",
+      "verifiable_from_resume": false
+    }
+  ],
+  "signals": [
+    {
+      "id": "s1",
+      "criterion": "Shipped card or payments products end to end",
+      "weight": 30,
+      "evidence_full": "Owned launch of a card or payments product to live customers",
+      "evidence_partial": "Contributed to a card launch, or launched an adjacent payments product",
+      "jd_phrase": "Launch new card programmes end to end with partner banks",
+      "weak_signal": false
+    },
+    {
+      "id": "s2",
+      "criterion": "Led delivery across risk, compliance and engineering",
+      "weight": 25,
+      "evidence_full": "Named cross-functional launch with risk, compliance and engineering partners",
+      "evidence_partial": "Cross-functional delivery with one or two of those functions",
+      "jd_phrase": "Partner with risk, compliance and engineering",
+      "weak_signal": false
+    },
+    {
+      "id": "s3",
+      "criterion": "Regulated launch experience",
+      "weight": 20,
+      "evidence_full": "Took a product through RBI, FCA, OCC or similar regulatory approval",
+      "evidence_partial": "Worked on compliance requirements without owning an approval",
+      "jd_phrase": "Experience with regulated launches (RBI or an equivalent regulator)",
+      "weak_signal": false
+    },
+    {
+      "id": "s4",
+      "criterion": "Roadmap ownership",
+      "weight": 12,
+      "evidence_full": "Owned a multi-quarter product roadmap and its prioritisation",
+      "evidence_partial": "Owned a backlog or a single feature area",
+      "jd_phrase": "Own the roadmap for the card issuing platform",
+      "weak_signal": false
+    },
+    {
+      "id": "s5",
+      "criterion": "Data fluency with SQL",
+      "weight": 10,
+      "evidence_full": "Used SQL or analysis to make a product decision with a stated outcome",
+      "evidence_partial": "Lists SQL or dashboards without a decision",
+      "jd_phrase": "Strong SQL and data skills",
+      "weak_signal": false
+    },
+    {
+      "id": "s6",
+      "criterion": "Postgraduate business education",
+      "weight": 3,
+      "evidence_full": "MBA or equivalent postgraduate business degree",
+      "evidence_partial": "Executive or short business programme",
+      "jd_phrase": "MBA from a top institute preferred",
+      "weak_signal": true
+    }
+  ],
+  "dropped": [
+    {
+      "jd_phrase": "6+ years in product management",
+      "reason": "Years stand in for capability already measured by s1 to s4."
+    },
+    {
+      "jd_phrase": "from a top institute",
+      "reason": "Institution rank predicts background more than capability. The MBA itself is kept as a weak signal."
+    },
+    {
+      "jd_phrase": "We are a young, energetic team",
+      "reason": "Age proxy. Not a capability and not scored."
+    }
+  ],
+  "open_questions": [
+    "Is the 3-day office requirement firm for this role?"
+  ]
+}

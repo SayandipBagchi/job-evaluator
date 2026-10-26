@@ -1,0 +1,18 @@
+Grace Mwangi
+grace.mwangi@example.com | +44 7700 900789
+Right to work in the UK: yes. London, can work on-site 4 days a week.
+
+Experience
+Frontend Engineer, Pixelmint Studio, London (Jan 2020 - Present)
+- Built React interfaces for retail websites
+- Wrote Python scripts to automate image resizing for the content team
+- Used MySQL as a developer for a product catalogue
+
+Web Developer, Freelance (Jun 2018 - Dec 2019)
+- Built marketing sites in WordPress
+
+Education
+Software Engineering Bootcamp Certificate, 2018
+
+Skills
+React, TypeScript, CSS, WordPress
