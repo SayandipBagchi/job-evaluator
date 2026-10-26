@@ -1,0 +1,17 @@
+{
+  "name": "job-evaluator",
+  "owner": {
+    "name": "Sayandip Bagchi"
+  },
+  "metadata": {
+    "description": "Job Evaluator: recruiter-side resume screening for Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "job-evaluator",
+      "source": "./",
+      "description": "Turns a job description into a frozen weighted rubric, scores each resume against it with quoted evidence, and recommends Shortlist, Review or Not recommended with a match score and confidence. A human confirms every recommendation.",
+      "category": "productivity"
+    }
+  ]
+}
