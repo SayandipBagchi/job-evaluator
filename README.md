@@ -60,7 +60,7 @@ Unlike humanise, this package ships a `.mcp.json` and real subagents in `agents/
 Drop the `.plugin` file into Claude and accept it, or add the containing folder as a plugin marketplace and install `job-evaluator` from it. Once the repo is pushed:
 
 ```
-/plugin install job-evaluator --marketplace SayandipBagchi/<repo>
+/plugin install job-evaluator --marketplace SayandipBagchi/job-evaluator
 ```
 
 For the MCP server:
