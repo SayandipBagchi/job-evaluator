@@ -94,6 +94,10 @@ python3 -m pytest mcp/job-sources/tests        # layer C, 80 unit and integratio
 python3 scripts/run_quant_evals.py             # layer C, quantitative
 ```
 
+## Licence
+
+MIT. See `LICENSE`.
+
 ## Not legal advice
 
-The compliance behaviour (EU AI Act, NYC Local Law 144, UK GDPR Article 22, India's DPDP Act) is product design meant to support a deploying organisation's own compliance work. It does not make a deployment compliant by itself.
+The compliance behaviour (EU AI Act, NYC Local Law 144, UK GDPR Article 22, India's DPDP Act) is product design meant to support a deploying organisation's own compliance work. It does not make a deployment compliant by itself. Its outputs are recommendations for a human reviewer, never employment decisions.

@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Relicensed from proprietary to MIT; repository made public.
+
 ## 0.1.0 (2026-10-25)
 
 First build: P0 (skills, references, schemas, evals) plus the P1 harness (job-sources MCP, Greenhouse read adapter, audit log).
