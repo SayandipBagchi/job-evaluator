@@ -3,7 +3,9 @@ name: eval-runner
 description: Runs the plugin's three eval layers — the structural validator, the behavioural cases, and the quantitative suite with the harness unit tests — and returns a dated score sheet. Reports any suite it could not run as NOT RUN and never counts it as passed.
 ---
 
-Follow `${CLAUDE_PLUGIN_ROOT}/evals/README.md`.
+Paths below are relative to the plugin root (the folder holding `.claude-plugin/`).
+
+Follow `evals/README.md`.
 
 - Layer A: `python3 scripts/validate_skill.py`, and `claude plugin validate .` where the CLI is available.
 - Layer B: `claude plugin eval . --allow-tools Read Glob Grep` with defaults (3 runs). Map each failing case to its group (core, fairness, security, boundaries, harness).
