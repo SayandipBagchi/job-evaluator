@@ -1,6 +1,7 @@
 ---
 name: job-evaluator
 description: Scores resumes against a job description as Shortlist, Review or Not recommended, with a 0-100 score, confidence and quoted evidence; a human decides. Use when a recruiter asks to evaluate, score or shortlist resumes for a JD or ATS job. Do not use to reject or contact candidates, for bulk screening (jd-applicant-screen), a job seeker's own fit (profile-optimiser), or JD writing.
+compatibility: Works on pasted or attached text in any Agent Skills host. The optional job-sources MCP server (Python 3.10+, mcp/job-sources/requirements.txt) adds JD fetch, ATS access, redaction, deterministic scoring and the audit log; GREENHOUSE_API_KEY enables Greenhouse.
 metadata:
   author: Sayandip Bagchi
 ---

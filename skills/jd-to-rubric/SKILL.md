@@ -1,6 +1,7 @@
 ---
 name: jd-to-rubric
 description: Turns a job description into a frozen, hashed screening rubric before any candidate is seen, with hard gates plus signals weighted to 100 and the resume evidence that counts for each. Use when asked to build a rubric for a JD, decide what to screen for, or weight requirements. Do not use to score resumes (job-evaluator), write a JD, or work from a job title alone.
+compatibility: Works in any Agent Skills host. The optional job-sources MCP server (Python 3.10+) adds JD fetch, rubric validation and hashing.
 metadata:
   author: Sayandip Bagchi
 ---
