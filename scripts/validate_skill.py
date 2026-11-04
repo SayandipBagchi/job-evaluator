@@ -17,7 +17,7 @@ MANIFEST = ROOT / ".claude-plugin" / "plugin.json"
 MCP_JSON = ROOT / ".mcp.json"
 SERVER = ROOT / "mcp" / "job-sources" / "server.py"
 
-FRONTMATTER_KEYS = {"name", "description", "metadata", "allowed-tools", "license"}
+FRONTMATTER_KEYS = {"name", "description", "metadata", "allowed-tools", "license", "compatibility"}
 
 SKILLS = {
     "job-evaluator": {

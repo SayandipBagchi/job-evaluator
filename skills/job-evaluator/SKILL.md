@@ -1,6 +1,7 @@
 ---
 name: job-evaluator
-description: Scores resumes against a job description for a recruiter or hiring manager and recommends Shortlist, Review or Not recommended, each with a 0 to 100 match score, a confidence level and quoted resume evidence. Use it when someone says "evaluate this resume against the JD", "shortlist these resumes", "score this applicant", "shortlist or not?", "is this candidate a fit?", "should we hire her?", "who should we interview", hands over a JD plus resumes or an ATS job, or asks to act in the ATS on scored candidates. It answers hiring questions with an evaluation and leaves the decision to the human. Do not use it to auto-reject or contact candidates, to screen thousands of applicants on an ATS index (use jd-applicant-screen), for a job seeker checking their own fit (use profile-optimiser), or to write a JD.
+description: Scores resumes against a job description as Shortlist, Review or Not recommended, with a 0-100 score, confidence and quoted evidence; a human decides. Use when a recruiter asks to evaluate, score or shortlist resumes for a JD or ATS job. Do not use to reject or contact candidates, for bulk screening (jd-applicant-screen), a job seeker's own fit (profile-optimiser), or JD writing.
+compatibility: Works on pasted or attached text in any Agent Skills host. The optional job-sources MCP server (Python 3.10+, mcp/job-sources/requirements.txt) adds JD fetch, ATS access, redaction, deterministic scoring and the audit log; GREENHOUSE_API_KEY enables Greenhouse.
 metadata:
   author: Sayandip Bagchi
 ---
@@ -85,6 +86,19 @@ Follow [the output contract](references/output-contract.md). In short:
 - Every Not recommended line carries the words "recommendation; a human confirms". No line says "reject", "hire" or "do not hire".
 - The final message stands on its own: it repeats the rubric table (or its hash and a one-line summary when the rubric was shown in full earlier in the same reply), and it ends with the line "This is a recommendation to support a human reviewer. It is not a hiring decision."
 - With the connector, append one record per candidate to the audit log with `eval_log`. Without it, say that no audit record was written.
+
+## Example
+
+Input: the card-issuing Senior PM rubric from jd-to-rubric and one pasted resume.
+
+Expected output (first lines of the scorecard):
+
+> **Priya R. · Shortlist · 82.5 / 100 · confidence High (0.80)**
+> Strengths: s1 Shipped card products: "Led launch of co-branded credit card to 180k customers in 9 months (2024)"
+> Gaps: s5 Data fluency: no evidence
+> Screening-call items: g1 Can work 3 days a week from Bengaluru: not stated on the resume
+
+Edge cases: a resume that verifiably fails a gate is Not recommended, with "recommendation; a human confirms"; an unreadable resume goes to Review with Low confidence. Full examples: [one scorecard](examples/scorecard.md), [a batch shortlist](examples/batch-shortlist.md), and [a scorecard that breaks the rules](examples/failed-score.md) with each rule it breaks.
 
 ## Compliance switches
 

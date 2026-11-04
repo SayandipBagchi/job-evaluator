@@ -37,7 +37,7 @@ def _personal_content(value: str) -> list[str]:
     from .scoring import find_phone_numbers
 
     found = []
-    if re.search(r"[\w.+-]+@[\w-]+\.[\w.]+", value):
+    if re.search(r"(?<![\w.+-])[\w.+-]+@[\w-]+\.[\w.]+", value):
         found.append("an email address")
     if find_phone_numbers(value):
         found.append("a phone number")

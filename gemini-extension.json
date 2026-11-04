@@ -1,0 +1,11 @@
+{
+  "name": "job-evaluator",
+  "version": "0.2.0",
+  "contextFileName": "AGENTS.md",
+  "mcpServers": {
+    "job-sources": {
+      "command": "python3",
+      "args": ["${extensionPath}/mcp/job-sources/server.py"]
+    }
+  }
+}
