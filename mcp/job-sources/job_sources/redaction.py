@@ -17,7 +17,8 @@ from dataclasses import dataclass, field
 
 from .scoring import find_phone_numbers
 
-EMAIL = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
+# The lookbehind anchors the match at a token start; without it a long run of word characters is O(n^2).
+EMAIL = re.compile(r"(?<![\w.+-])[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
 URL = re.compile(r"(?:https?://|www\.)\S+|\b(?:linkedin\.com|github\.com|twitter\.com|x\.com|instagram\.com)/\S+", re.I)
 HANDLE_LABEL = re.compile(r"\b(?:linkedin|github|twitter|instagram)\s*[:\-]\s*@?/?[\w./-]+", re.I)
 AT_HANDLE = re.compile(r"(?<![\w.])@[A-Za-z_][\w.]{2,30}\b")

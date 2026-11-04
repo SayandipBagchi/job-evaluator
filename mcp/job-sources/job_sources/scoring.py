@@ -258,7 +258,7 @@ def output_wording_problems(text: str) -> list[str]:
         if per_candidate and "human confirms" not in low:
             problems.append("a Not recommended candidate line lacks 'recommendation; a human confirms' (GR8)")
             break
-    if re.search(r"[\w.+-]+@[\w-]+\.[\w.]+", text):
+    if re.search(r"(?<![\w.+-])[\w.+-]+@[\w-]+\.[\w.]+", text):
         problems.append("email address in output (GR11)")
     if find_phone_numbers(text):
         problems.append("phone number in output (GR11)")

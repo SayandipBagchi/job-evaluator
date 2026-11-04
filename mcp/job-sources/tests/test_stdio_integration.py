@@ -31,8 +31,17 @@ async def _run(log_dir: str) -> None:
     async with stdio_client(params) as (read, write):
         async with ClientSession(read, write) as session:
             await session.initialize()
-            names = {t.name for t in (await session.list_tools()).tools}
+            tools = (await session.list_tools()).tools
+            names = {t.name for t in tools}
             assert names == set(server.READ_TOOLS + server.WRITE_TOOLS)
+            for t in tools:  # strict, documented schemas and honest annotations
+                assert t.input_schema.get("additionalProperties") is False, t.name
+                assert all(p.get("description") for p in t.input_schema.get("properties", {}).values()), t.name
+                assert t.annotations is not None, t.name
+            extra = await session.call_tool("jd_from_text", {"text": "x", "unexpected": 1})
+            assert extra.is_error
+            ssrf = _text(await session.call_tool("jd_fetch", {"url": "http://169.254.169.254/latest/meta-data/"}))
+            assert ssrf["status"] == "refused"
 
             rubric = json.loads((FIXTURES / "rubrics" / "pm-cards.json").read_text())
             resume = (FIXTURES / "resumes" / "pm-cards" / "a-strong.txt").read_text()
