@@ -69,12 +69,27 @@ In Claude Code:
 For the MCP server:
 
 ```bash
-pip install -r mcp/job-sources/requirements.txt
+pip install -r mcp/job-sources/requirements.txt       # pinned runtime deps (Python 3.10+)
 export GREENHOUSE_API_KEY=...            # optional, for ATS pulls
 export JOB_EVALUATOR_LOG_DIR=~/job-evaluator-logs   # optional, default ~/.job-evaluator/logs
 ```
 
-The server runs on the MCP Python SDK 1.x or 2.x.
+The server runs on the MCP Python SDK 1.x or 2.x; `requirements.txt` pins the versions the tests run against. For the tests, install `mcp/job-sources/requirements-dev.txt`.
+
+### What the server stores on disk
+
+Everything lives in one folder: `$JOB_EVALUATOR_LOG_DIR`, or `~/.job-evaluator/logs` when it is not set. Point it at a project folder or an encrypted volume if your policy needs that.
+
+| Path | What it holds | Written by |
+| --- | --- | --- |
+| `identity/cand_<hash>.json` | Sealed identity for one resume: display name and profile links only, never email or phone. Read back only by `identity_rejoin` at render time | `prepare_resume`, `redact`, `ats_get_resume` |
+| `evaluations.jsonl` | Append-only audit log: one record per evaluation (hashes, score, band, confidence, jurisdictions) and one per human decision. No resume text, no contact details | `eval_log`, `record_human_decision` |
+
+`eval_log_prune` deletes records and sealed identities older than the role's `retention_days`. Nothing else is written outside that folder, apart from temporary files for ATS downloads, which are deleted after parsing.
+
+### Network and input limits
+
+`jd_fetch` is the only tool that fetches a user-supplied URL. It accepts http(s) on the default ports only, refuses URLs with credentials, resolves the host and refuses private, loopback, link-local (including cloud metadata at 169.254.169.254), CGNAT and other non-public addresses, re-checks the connected address, validates every redirect, ignores proxy environment variables, and stops at 2 MB. ATS calls go to the provider's API host, and resume files to the download link the ATS returns. Text inputs are capped (100,000 characters for resumes and JDs) and unknown arguments are rejected.
 
 ## Use
 
@@ -126,7 +141,7 @@ job-evaluator/
 ```bash
 python3 scripts/validate_skill.py              # layer A
 claude plugin eval . --allow-tools Read Glob Grep   # layer B
-python3 -m pytest mcp/job-sources/tests        # layer C, 80 unit and integration tests
+python3 -m pytest mcp/job-sources/tests        # layer C, unit, security and stdio integration tests
 python3 scripts/run_quant_evals.py             # layer C, quantitative
 ```
 

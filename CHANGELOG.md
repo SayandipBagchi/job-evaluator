@@ -1,6 +1,27 @@
 # Changelog
 
-## Unreleased
+## 0.2.0 (2026-11-04)
+
+Hardening from an Agent Evaluator (agent-eval 0.1.0) review: score 68.8 (C) before.
+
+### Security
+
+- `jd_fetch` no longer fetches internal addresses (SSRF). Only http(s) on default ports, no credentials in the URL; the host must resolve only to public addresses (IPv4-mapped, 6to4 and Teredo IPv6 unwrapped), the connected peer is re-checked (DNS rebinding), every redirect hop is validated (max 5), proxy environment variables are ignored, responses stop at 2 MB. Refusals return `status: refused` and the skill asks for the text.
+- Email regexes in redaction, scoring and audit were quadratic on long runs of word characters; a 200,000-character input hung the server. They are now anchored and linear.
+
+### Changed
+
+- Every MCP tool parameter has a description and a size limit (100,000 characters for resume and JD text); unknown arguments are rejected (`additionalProperties: false`); tools carry MCP annotations; tool descriptions no longer point at other tools.
+- Runtime dependencies pinned in `requirements.txt`; test-only deps moved to `requirements-dev.txt`.
+- Skill descriptions shortened to about 100 tokens each. `jd-to-rubric` gained an example and an "If a step fails" section; `job-evaluator` gained a short example.
+- Subagent prompts use plugin-root-relative paths instead of `${CLAUDE_PLUGIN_ROOT}`.
+- README documents the on-disk data folder, what it stores, and the network and input limits. Added `AGENTS.md` and `gemini-extension.json` for Codex and Gemini CLI.
+
+### Tests
+
+- New `test_jd_fetch_security.py` (internal addresses, schemes, ports, credentials, DNS to private IPs, redirect to metadata, response cap) and `test_input_limits.py` (oversize input, regex timing). The stdio test now checks strict schemas, parameter descriptions, annotations and SSRF refusal end to end.
+
+## Unreleased (before 0.2.0)
 
 - Relicensed from proprietary to MIT; repository made public.
 - Added `.claude-plugin/marketplace.json` so the repo installs as its own marketplace; README install steps corrected to match.
